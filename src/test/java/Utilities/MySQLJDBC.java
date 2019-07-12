@@ -1,10 +1,7 @@
 package Utilities;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class MySQLJDBC {
         private static Connection connection;
@@ -16,8 +13,9 @@ public class MySQLJDBC {
 
         public static void establishConnection() throws SQLException {
 
-            connection= DriverManager.getConnection(Configuration.getProperty("dbUrl"),
-                    Configuration.getProperty("dbUsername"),Configuration.getProperty("dbPassword"));
+            connection= DriverManager.getConnection("jdbc:mysql://localhost:3306/medetDB6ctlq?serverTimezone="+ TimeZone.getDefault().getID(),
+                    "medetDB6ctlq","WCCl4w7iZt");
+
 
         }
 
